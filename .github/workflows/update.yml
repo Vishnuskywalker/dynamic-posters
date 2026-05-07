@@ -22,7 +22,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install Requests
-        run: pip install requests
+        run: pip install requests pillow
 
       - name: Run Script
         env:
@@ -33,6 +33,6 @@ jobs:
         run: |
           git config user.name github-actions
           git config user.email actions@github.com
-          git add posters/anime.jpg
+          git add posters/latest.jpg
           git commit -m "Update poster" || exit 0
           git push
